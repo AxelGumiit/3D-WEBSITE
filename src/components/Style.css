@@ -106,7 +106,7 @@ body {
     position: fixed;
     top: 3rem;
     right: 3rem;
-    padding: 0.75rem;
+    padding: 0.65rem;
     background-color: skyblue;
     width: 2.75rem;
     height: 2.75rem;
@@ -120,7 +120,7 @@ body {
   .line {
     background-color: white;
     height: 5px; 
-    border-radius: 0.375rem;
+    border-radius: 0.475rem;
     width: 110%;
     transition: all 0.3s ease;
   }

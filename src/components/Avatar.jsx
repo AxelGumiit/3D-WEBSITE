@@ -13,7 +13,6 @@ import { SkeletonUtils } from 'three-stdlib'
 
 
 export function Avatar(props) {
-  const {animations} = props;
 
   const group =  useRef();
   const { scene } = useGLTF('models/6561e968e55200949953c666.glb');
@@ -23,16 +22,12 @@ export function Avatar(props) {
   typingAnimation[0].name = "Typing";
   standingAnimation[0].name = "Standing";
   fallingAnimation[0].name = "Falling";
-  const{actions} = useAnimations([typingAnimation[0],standingAnimation[0], fallingAnimation[0]], group);
+  const{actions} = useAnimations(typingAnimation, group);
 
 
   useEffect(() =>{
-    actions[animations].reset().fadeIn(0.5).play();
-    return() =>{
-        actions[animations].reset().fadeOut(0.5);
-    }
-  }, [animations]
-);
+    actions["Typing"].reset().play();
+  }, []);
   
  
 
