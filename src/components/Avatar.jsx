@@ -14,19 +14,21 @@ import { SkeletonUtils } from 'three-stdlib'
 
 export function Avatar(props) {
 
+
+
   const group =  useRef();
   const { scene } = useGLTF('models/6561e968e55200949953c666.glb');
   const{animations : typingAnimation} = useFBX("animations/Typing.fbx");
   const{animations : standingAnimation} = useFBX("animations/Idle.fbx");
   const{animations : fallingAnimation} = useFBX("animations/Falling Idle.fbx");
-  typingAnimation[0].name = "Typing";
+  typingAnimation[0].name = "Type";
   standingAnimation[0].name = "Standing";
   fallingAnimation[0].name = "Falling";
-  const{actions} = useAnimations(typingAnimation, group);
+  const{actions} = useAnimations([typingAnimation[0], standingAnimation[0], fallingAnimation[0]], group);
 
 
   useEffect(() =>{
-    actions["Typing"].reset().play();
+    actions["Type"].reset().play();
   }, []);
   
  
