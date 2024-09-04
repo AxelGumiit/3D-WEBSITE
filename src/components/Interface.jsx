@@ -122,7 +122,9 @@ const AboutSection = () => {
   };
 
   const ProjectSection = () => {
+  
     return (
+      <div className='Project-Section'>
       <div id="my-work-section">
         <span className="subheader-text">My Work / My Projects</span>
   
@@ -160,6 +162,7 @@ const AboutSection = () => {
           </div>
 
         </div>
+      </div>
       </div>
     );
   };
