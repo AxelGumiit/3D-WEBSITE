@@ -18,10 +18,10 @@ export const Interface = () => {
         <AboutSection/>
        <SkillSection/>
         <Section>
-          <h1>Projects</h1>
+         <ProjectSection/>
         </Section>
         <Section>
-          <h1>Contact us</h1>
+         <ContactSection/>
         </Section>
       </div>
     );
@@ -123,4 +123,36 @@ const AboutSection = () => {
       </Section>
     );
   };
+
+  const ProjectSection = () => {
+    return (
+      <Section>
+        <h1>Hello World</h1>
+      </Section>
+    );
+  };
+
+  const ContactSection = () => {
+    return (
+      <Section>
+        <div className="contact-section">
+        <h1>Contact Me</h1>
+        <div className="Form">
+          <form action="https://formsubmit.co/axelgumiit1@email.com" method="POST">
+
+          <label htmlFor="fname">Name</label>
+            <input type="email" id="fname" name="firstname" placeholder="Your Name.." />
+            
+            <label htmlFor="fname">Email</label>
+            <input type="email" id="fname" name="firstname" placeholder="Your Email.." />
   
+            <label htmlFor="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style={{ height: '200px' }} />
+  
+            <input type="submit" value="Send" />
+          </form>
+        </div>
+        </div>
+      </Section>
+    );
+  };

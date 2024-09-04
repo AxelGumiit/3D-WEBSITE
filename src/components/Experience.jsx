@@ -2,7 +2,9 @@ import { Environment, OrbitControls, Sky } from "@react-three/drei";
 import { Avatar } from "./Avatar";
 import { Office } from "./Office";
 import {motion} from "framer-motion-3d"
-import { MotionConfig } from "framer-motion";
+import { Avatar2 } from "./Avatar2";
+import { PunchingBag } from "./PunchingBag";
+import { Avatar3 } from "./Avatar3";
 
 export const Experience = (props) => {
   const {section} = props;
@@ -37,6 +39,12 @@ export const Experience = (props) => {
           <group  position={[-1.3, 0.5, 0.2]} rotation={[0, 180, 0]} scale={2.5}> <Avatar/></group>
           <Office/>
         </motion.group>
+
+        <group  position={[-1, -13, -1.5]} rotation={[0, 1, 0]} scale={3.5}> <Avatar2/></group>
+        <group  position={[1.5, -13, 0.5]} rotation={[0, 1, 0]} scale={0.9}> <PunchingBag/></group>
+
+
+        <group  position={[-1, -36, -1.5]} rotation={[0.05, 1, 0]} scale={3.5}> <Avatar3/></group>
       </group>
     </>
   );
