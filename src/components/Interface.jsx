@@ -17,12 +17,9 @@ export const Interface = () => {
       <div className="flex flex-col items-center w-screen">
         <AboutSection/>
        <SkillSection/>
-        <Section>
-         <ProjectSection/>
-        </Section>
-        <Section>
-         <ContactSection/>
-        </Section>
+       <Section> <ProjectSection/></Section>
+       <Section><ContactSection/></Section>
+  
       </div>
     );
   };
@@ -126,9 +123,44 @@ const AboutSection = () => {
 
   const ProjectSection = () => {
     return (
-      <Section>
-        <h1>Hello World</h1>
-      </Section>
+      <div id="my-work-section">
+        <span className="subheader-text">My Work / My Projects</span>
+  
+        <div className="projects-container">
+          <div className="project-card">
+            <img src="./images/ChessGame.png" className="project-image" alt="Chess Game" />
+            <div className="project-card-text-container">
+              <div className="project-title">Chess Game</div>
+            </div>
+            <a className="button" href="https://github.com/AxelGumiit/cpp-chess" target="_blank">
+              <span className="button-text">Check it out</span>
+          </a>
+          </div>
+  
+          <div className="project-card">
+            <img src="./images/Risk game.png" className="project-image" alt="World Conquest" />
+            <div className="project-card-text-container">
+              <div className="project-title">World Conquest</div>
+  
+            </div>
+            <a className="button" href="https://github.com/AxelGumiit/world-conquest"  target="_blank">
+              <span className="button-text">Check it out</span>
+  
+            </a>
+          </div>
+
+          <div className="project-card">
+            <img src="./images/ChessGame.png" className="project-image" alt="World Conquest" />
+            <div className="project-card-text-container">
+              <div className="project-title">Book slider</div>
+            </div>
+            <a className="button" href="./project-pages/project2.html">
+              <span className="button-text">Check it out</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
     );
   };
 

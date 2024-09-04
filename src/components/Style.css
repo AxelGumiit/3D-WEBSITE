@@ -14,10 +14,10 @@ body {
   }
   
   .about-section {
-    height: 50vh;
+    height: 45vh;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the left */
+    align-items: flex-start; 
   }
   
   .about-section h1 {
@@ -189,7 +189,7 @@ body {
   }
 
   .contact-section {
-    height: 50vh;
+    height: 10vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
@@ -239,3 +239,98 @@ body {
   input[type=submit]:hover {
     text-decoration: underline;
   }
+
+  
+  .flex-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  
+    button {
+      &.hover-text-indigo-600 {
+        transition: color 0.3s ease;
+        &:hover {
+          color: #4f46e5; 
+        }
+      }
+    }
+  
+    h2 {
+      font-size: 3rem; 
+      font-weight: bold;
+    }
+  
+  }
+
+#my-work-section {
+  padding: 30px;
+  background-color: #BCECAC;; 
+}
+  .subheader-text {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+    .project-card {
+      background-color: peachpuff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 300px; 
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+      .project-image {
+        width: 100%;
+        height: auto;
+      }
+
+      .project-card-text-container {
+        padding: 15px;
+
+        .project-title {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+
+        .project-card-text {
+          font-size: 14px;
+          color: #666;
+        }
+      }
+
+      .button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 15px;
+        font-size: 14px;
+        font-weight: bold;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+
+        .right-arrow-icon {
+          width: 16px;
+          height: auto;
+        }
+      }
+    
+  
+  
