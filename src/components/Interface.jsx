@@ -2,6 +2,7 @@ import './Style.css';
 import React from 'react';
 import { useEffect, useRef } from "react";
 
+
 const Section = (props) => {
     const { children } = props;
   
@@ -13,8 +14,12 @@ const Section = (props) => {
   };
 
 export const Interface = () => {
+
+  
     return (
       <div className="flex flex-col items-center w-screen">
+
+        
         <AboutSection/>
        <SkillSection/>
        <Section> <ProjectSection/></Section>
@@ -37,9 +42,6 @@ const AboutSection = () => {
             who aims to bring different skillsets to businesses.
           </p>
           <br />
-          <div className='button'>
-          <button>Explore projects</button>
-          </div>
         </div>
       </Section>
     );
