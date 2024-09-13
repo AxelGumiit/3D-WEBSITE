@@ -5,14 +5,17 @@ import { Interface } from "./components/Interface";
 import { ScrollManager } from "./components/ScrollManager";
 import { useState } from "react";
 import { Nav } from "./components/Nav";
+import './index.css'
+
 
 function App() {
   const [section, setSection] = useState(0);
   const [navOpened, setNavOpened] = useState(false);
 
   return (
-    <div style={{ background: 'radial-gradient(#FDDC5C #FFE5B4 80%)', height: '100vh', width: '100vw' }}>
+     <div className="canvas-container">
       <Canvas shadows camera={{ position: [10, 5, -1], fov: 45 }}>
+      <color attach="background" args={["#CF9FFF"]} />
         <ScrollControls pages={5} damping={0.1}>
           <ScrollManager section={section} onSectionChange={setSection} />
           <Scroll>
@@ -24,7 +27,7 @@ function App() {
         </ScrollControls>
       </Canvas>
       <Nav onSectionChange={setSection} navOpened={navOpened} setNavOpened={setNavOpened} />
-    </div>
+      </div>
   );
 }
 
