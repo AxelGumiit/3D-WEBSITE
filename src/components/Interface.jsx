@@ -154,11 +154,11 @@ const AboutSection = () => {
           </div>
 
           <div className="project-card">
-            <img src="./images/ChessGame.png" className="project-image" alt="World Conquest" />
+            <img src="./images/book-slider.png" className="project-image" alt="World Conquest" />
             <div className="project-card-text-container">
               <div className="project-title">Book slider</div>
             </div>
-            <a className="button" href="./project-pages/project2.html">
+            <a className="button" href="https://happy-aniversarry.netlify.app/" target = "blank">
               <span className="button-text">Check it out</span>
             </a>
           </div>
