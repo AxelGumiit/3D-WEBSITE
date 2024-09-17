@@ -7,7 +7,7 @@ import { useRef, useState } from "react";
 import { Nav } from "./components/Nav";
 import './index.css'
 import { useEffect } from "react";
-import { LoadingScreen } from "./components/loadingScreen";
+
 
 
 
@@ -52,7 +52,7 @@ function App() {
 
   return (
     <>
-       <LoadingScreen started={started} setStarted={setStarted} />
+
      <div className="canvas-container">
       <Canvas shadows camera={{ position: [10, 5, -1], fov: 45 }}>
       <color attach="background" args={["#CF9FFF"]} />

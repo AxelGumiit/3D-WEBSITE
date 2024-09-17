@@ -179,7 +179,7 @@ justify-content: center;
 flex-direction: column;
 gap: 1.5rem; 
 padding: 2rem; 
-background-color: #BCECAC;
+background-color: #B3fff7;
 }
 
 .menu-item {
@@ -187,11 +187,12 @@ font-size: 1.5rem;
 font-weight: bold;
 cursor: pointer;
 transition: color 0.3s ease;
+border-radius: 10px;
 padding: 10px;
 font-size: 2rem;
 font-weight: 800;
 line-height: 1.375;
-background-color: #FFE5B4;
+background-color: #CF9FFF;
 
 }
 
@@ -223,7 +224,7 @@ align-items: flex-start;
 
 
 .Form {
-background-color:#BCECAC;
+background-color:#B3fff7;
 padding: 20px;  
 border-radius: 8px; 
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -240,6 +241,17 @@ margin-top: 6px;
 margin-bottom: 16px;
 resize: vertical 
 }
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid ;
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px;
+  resize: vertical 
+  }
 
 
 input[type=submit] {
@@ -354,7 +366,7 @@ transition: opacity 0.5s;
 
 .projects-container {
   display: flex;
-  flex-wrap: wrap;
+
   gap: 20px;
 }
 
