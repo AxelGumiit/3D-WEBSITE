@@ -354,8 +354,8 @@ transition: opacity 0.5s;
 
 .projects-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  
+  gap: 10px;
 }
 
 .project-card {
@@ -363,12 +363,12 @@ transition: opacity 0.5s;
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
-  width: calc(33.333% - 20px);
+  width: 200%;
 }
 
 .project-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
 }
 
 .project-image {
