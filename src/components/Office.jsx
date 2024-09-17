@@ -11,7 +11,7 @@ import { useLoader } from '@react-three/fiber';
 export function Office(props) {
   const { nodes, materials } = useGLTF('models/OFFICE.glb')
 
-  const myTexture = useLoader(TextureLoader, 'Textures/screen.jpeg');
+  const myTexture = useLoader(TextureLoader, 'Textures/Imac.jpg');
   
 
   nodes.Cube.material.map = myTexture;

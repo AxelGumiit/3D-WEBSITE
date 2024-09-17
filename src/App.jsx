@@ -7,12 +7,14 @@ import { useRef, useState } from "react";
 import { Nav } from "./components/Nav";
 import './index.css'
 import { useEffect } from "react";
+import { LoadingScreen } from "./components/LoadingScreen";
 
 
 
 function App() {
   const [section, setSection] = useState(0);
   const [navOpened, setNavOpened] = useState(false);
+  const [started, setStarted] = useState(false);
 
   const [isPlaying, setIsPlayer] = useState(0)
   const audioRef = useRef(new Audio('/music/music.mp3'));
@@ -23,6 +25,7 @@ function App() {
       audioRef.current.pause();
     }else{
         audioRef.current.play();
+        audioRef.current.loop = true; 
       }
       setIsPlayer(!isPlaying);
     };
@@ -48,6 +51,8 @@ function App() {
   }, []);
 
   return (
+    <>
+       <LoadingScreen started={started} setStarted={setStarted} />
      <div className="canvas-container">
       <Canvas shadows camera={{ position: [10, 5, -1], fov: 45 }}>
       <color attach="background" args={["#CF9FFF"]} />
@@ -63,10 +68,11 @@ function App() {
       </Canvas>
       <Nav onSectionChange={setSection} navOpened={navOpened} setNavOpened={setNavOpened} />
 
-      <button className="music-toggle" onClick={toggleMusic}>
+       <button className="music-toggle" onClick={toggleMusic}>
         {isPlaying ? 'Turn Off Music' : 'Turn On Music'}
       </button>
       </div>
+      </>
   );
 }
 

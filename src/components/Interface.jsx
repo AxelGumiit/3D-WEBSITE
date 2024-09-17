@@ -39,7 +39,7 @@ const AboutSection = () => {
           </h1>
           <p>
             Currently studying a bachelor degree in Computer<br/>Science
-            who aims to bring different skillsets to businesses.
+            who aims to bring different skillsets to <br/> businesses.
           </p>
           <br />
         </div>
@@ -123,51 +123,58 @@ const AboutSection = () => {
     );
   };
 
-  const ProjectSection = () => {
+  const projects = [
+    {
+      title: 'Chess Game',
+      image: './images/ChessGame.png',
+      link: 'https://github.com/AxelGumiit/cpp-chess',
+      description: 'A classic chess game developed in C++. Play against the computer or another player.'
+    },
+    {
+      title: 'World Conquest',
+      image: './images/Risk game.png',
+      link: 'https://github.com/AxelGumiit/world-conquest',
+      description: 'A strategy game inspired by Risk, where you can conquer the world with tactical gameplay.'
+    },
+    {
+      title: 'Book Slider',
+      image: './images/book-slider.png',
+      link: 'https://happy-aniversarry.netlify.app/',
+      description: 'An interactive book slider showcasing various book covers and details.'
+    }
+  ];
   
-    return (
-      <div className='Project-Section'>
+  const ProjectCard = ({ title, image, link, description }) => (
+    <div className="project-card">
+      <img src={image} className="project-image" alt={title} />
+      <div className="project-card-text-container">
+        <div className="project-title">{title}</div>
+        <p className="project-description">{description}</p>
+      </div>
+      <a className="button" href={link} target="_blank" rel="noopener noreferrer">
+        <span className="button-text">Check it out</span>
+      </a>
+    </div>
+  );
+  
+  const ProjectSection = () => (
+    <section className='project-section'>
       <div id="my-work-section">
         <span className="subheader-text">My Work / My Projects</span>
-  
         <div className="projects-container">
-          <div className="project-card">
-            <img src="./images/ChessGame.png" className="project-image" alt="Chess Game" />
-            <div className="project-card-text-container">
-              <div className="project-title">Chess Game</div>
-            </div>
-            <a className="button" href="https://github.com/AxelGumiit/cpp-chess" target="_blank">
-              <span className="button-text">Check it out</span>
-          </a>
-          </div>
-  
-          <div className="project-card">
-            <img src="./images/Risk game.png" className="project-image" alt="World Conquest" />
-            <div className="project-card-text-container">
-              <div className="project-title">World Conquest</div>
-  
-            </div>
-            <a className="button" href="https://github.com/AxelGumiit/world-conquest"  target="_blank">
-              <span className="button-text">Check it out</span>
-  
-            </a>
-          </div>
-
-          <div className="project-card">
-            <img src="./images/book-slider.png" className="project-image" alt="World Conquest" />
-            <div className="project-card-text-container">
-              <div className="project-title">Book slider</div>
-            </div>
-            <a className="button" href="https://happy-aniversarry.netlify.app/" target = "blank">
-              <span className="button-text">Check it out</span>
-            </a>
-          </div>
-
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              title={project.title}
+              image={project.image}
+              link={project.link}
+              description={project.description}
+            />
+          ))}
         </div>
       </div>
-      </div>
-    );
-  };
+    </section>
+  );
 
   const ContactSection = () => {
     return (
