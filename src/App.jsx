@@ -7,7 +7,7 @@ import { useRef, useState } from "react";
 import { Nav } from "./components/Nav";
 import './index.css'
 import { useEffect } from "react";
-import { LoadingScreen } from "./components/LoadingScreen";
+import { LoadingScreen } from "./components/loadingScreen";
 
 
 
