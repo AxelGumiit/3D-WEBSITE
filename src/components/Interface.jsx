@@ -137,18 +137,11 @@ const AboutSection = () => {
       description: 'A strategy game inspired by Risk, where you can conquer the world with tactical gameplay.'
     },
     {
-      title: 'PortFolio Website',
-      image: './images/Portfolio-web.png',
-      link: 'https://github.com/AxelGumiit/3D-WEBSITE',
-      description: 'A Portfolio website Integrating 3d aspects'
-    },
-    {
-      title: 'Book-slider',
+      title: 'Book Slider',
       image: './images/book-slider.png',
       link: 'https://happy-aniversarry.netlify.app/',
       description: 'An interactive book slider showcasing various book covers and details.'
     }
-    
   ];
   
   const ProjectCard = ({ title, image, link, description }) => (
