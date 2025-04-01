@@ -21,13 +21,13 @@ To set up the project locally, follow these steps:
 git clone https://github.com/yourusername/3d-website.git
 cd 3d-website
 ```
-###2. Install dependencies:
+### 2. Install dependencies:
 ```bash
 npm install
 yarn install
 
 ```
-###To Run the app
+### 3. To Run the app
 ```bash
 npm run dev
 
